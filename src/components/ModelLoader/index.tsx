@@ -26,6 +26,7 @@ const ModelLoader = memo(({
 }: ModelLoaderProps) => {
   const gltf = useLoader(GLTFLoader, path);
   const [sceneClone] = useState(() => gltf.scene.clone(true));
+  console.log(gltf);
 
   useEffect(() => {
     sceneClone.traverse((child: any) => {
